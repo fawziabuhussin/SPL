@@ -1,0 +1,43 @@
+g++ StompClient.cpp -o main -lboost_system -lpthread
+
+./main 127.0.0.1 7777
+./bin/StompWCIClient 127.0.0.1 7777
+
+login 127.0.0.1:7777 fawzi abu
+login 127.0.0.1:7777 yaso ham
+login 127.0.0.1:7777 leen wat
+
+
+join Germany_Japan
+join germany_spain
+join spain_portugees
+join swiss_pales
+
+
+exit germany_spain
+exit spain_portugees
+exit swiss_pales
+exit Germany_Japan
+
+report events1_partial.json
+report events1.json
+summary Germany_Japan fawzi events1_partial
+logout
+
+login 127.0.0.1:7777 fawzi abu
+join Germany_Japan
+report events1.json
+report events1_partial.json
+summary Germany_Japan fawzi events1
+summary Germany_Japan fawzi events1_partial
+
+
+login 127.0.0.1:7777 yaso ham
+join Germany_Japan
+report events1_partial.json
+summary Germany_Japan yaso events1_partial
+
+login 127.0.0.1:7777 leen wat
+join Germany_Japan
+report events1_partial.json
+summary Germany_Japan leen events1_partial
